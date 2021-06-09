@@ -1,0 +1,42 @@
+PROGRAM -> int id ( ) { CS }
+CS -> S CS
+CS -> ε
+S -> BT IT ;
+S -> id FA
+S -> if ( CE ) { CS } ELSE
+S -> while ( CE ) { CS }
+S -> return ui ;
+FA -> ( IT ) ;
+FA -> = E ;
+IT -> id IT'
+IT' -> , id IT'
+IT' -> ε
+ELSE -> else { CS }
+ELSE -> ε
+CE -> E CO E
+E -> X E'
+E -> W E'
+E' -> W E'
+E' -> ε
+W -> + X
+W -> - X
+X -> Z X'
+X' -> Y X'
+X' -> ε
+Y -> * Z
+Y -> / Z
+Z -> id
+Z -> ui
+Z -> ( E )
+CO -> >
+CO -> >=
+CO -> <
+CO -> <=
+CO -> ==
+CO -> !=
+BT -> char
+BT -> short
+BT -> int
+BT -> long
+BT -> float
+BT -> double
